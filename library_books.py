@@ -1,4 +1,4 @@
-library_books = [
+all_books = [
     {
         "id": "B1",
         "title": "The Lightning Thief",
@@ -72,3 +72,13 @@ library_books = [
         "checkouts": 3
     }
 ]
+def view_all_books(all_books):
+        view_all_books(all_books)
+print('Available Books:')
+for book in all_books:
+        if (book["available"]== True):
+            print(f"Book ID: {book['id']}")
+            print(f"Title: {book['title']}")
+            print(f"Author: {book['author']}")
+            print ()
+[]
