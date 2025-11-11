@@ -1,3 +1,4 @@
+
 all_books = [
     {
         "id": "B1",
@@ -71,14 +72,40 @@ all_books = [
         "due_date": "2025-11-12",
         "checkouts": 3
     }
+# -------- Level 1 --------
+# TODO: Create a function to view all books that are currently available
+# Output should include book ID, title, and author
 ]
 def view_all_books(all_books):
-        view_all_books(all_books)
-print('Available Books:')
-for book in all_books:
-        if (book["available"]== True):
-            print(f"Book ID: {book['id']}")
-            print(f"Title: {book['title']}")
-            print(f"Author: {book['author']}")
-            print ()
+    print('Available Books:')
+    for book in all_books:
+            if (book["available"]== True):
+                print(f"Book ID: {book['id']}")
+                print(f"Title: {book['title']}")
+                print(f"Author: {book['author']}")
+                print ()
 []
+# -------- Level 2 --------
+# TODO: Create a function to search books by author OR genre
+# Search should be case-insensitive
+# Return a list of matching books
+[]
+def search_all_books(all_books):
+    search_term = input("Enter the author or genre of the book you would like to look up ").lower()
+    matching_books = []
+    for book in all_books:
+        if search_term in book["author"].lower() or search_term in book["genre"].lower():
+                matching_books.append(book)
+    if matching_books:
+        print("Matching Books:")
+        for book in matching_books:
+                print(f"Book ID: {book['id']}")
+                print(f"Title: {book['title']}")
+                print(f"Author: {book['author']}")
+                print(f"Genre: {book['genre']}")
+                print ()
+    else:
+        print("No books found matching your search.")
+
+view_all_books(all_books)
+search_all_books(all_books)
